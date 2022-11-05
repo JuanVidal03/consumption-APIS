@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 // import axios rick and morty
 import { getAllCharacters } from '../../services/services';
-// import react-roter-dom
-import { useNavigate } from 'react-router-dom';
 
 const RickAndMortyComponent = () => {
 
@@ -26,19 +24,29 @@ const RickAndMortyComponent = () => {
         obtainCharacters();
     }, []);
 
+    //change document.title
+    document.title = 'Rick and Morty API'
+
     return (
         <div>
             <div className='title__container-RAM'>
                 <h1 className='title__RAM'>The Rick and Morty API</h1>
-                <p>https://rickandmortyapi.com/</p>
-            </div>
+                <a
+                href='https://rickandmortyapi.com/'
+                target='_blank'
+                rel='noreferrer'
+                className='oficial-site'>Check the Oficial Website</a>
+                </div>
             <div className='characters__principal-container-RAM'>
             {
                 character.map((character, index) => {
                     return(
                         <div key={index} className='characters__container-RAM'>
                             <div className='img__container-RAM'>
-                                <img src={character.image} className='img_RAM'/>
+                                <img
+                                alt='character img'
+                                src={character.image}
+                                className='img_RAM'/>
                             </div>
                             <div className='characters__info-RAM'>
                                 <h6 className='name_RAM'>{character.name}</h6>
@@ -59,7 +67,9 @@ const RickAndMortyComponent = () => {
                                         }
                                         })()
                                     }
-                                    <p className='specie-RAM'>{character.status} - {character.species}</p>
+                                    <p
+                                    className='specie-RAM'
+                                    >{character.status} - {character.species}</p>
                                 </div> <br/>
                                 <div>
                                     <p className='origin-RAM'>Planet Origin:</p>
@@ -67,7 +77,12 @@ const RickAndMortyComponent = () => {
                                 </div> <br/>
                                 <div>
                                     <p className='origin-RAM'>Fisrt seen in:</p>
-                                    <p className='origin-name-RAM'>{character.episode[0]}</p>
+                                    <a
+                                    href={character.episode[0]}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className='origin-name-RAM'
+                                    >{character.episode[0]}</a>
                                 </div>
                             </div>
                         </div>

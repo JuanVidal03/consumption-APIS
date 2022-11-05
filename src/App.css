@@ -7,11 +7,12 @@
   font-family: 'Roboto', sans-serif;
 }
 ::selection{
-  color: #008000;
-  background-color: #202329;
+  color: var(--primary-color-rick-and-morty);
+  background-color: var(--secondary-color-rick-and-morty);
 }
 :root{
   --white: #fff;
+  --black: #000;
   --primary-color-rick-and-morty: #ff9800;
   --secondary-color-rick-and-morty: #202329;
 }
@@ -54,6 +55,12 @@ RICK AND MORTY STYLES
   color: var(--secondary-color-rick-and-morty);
 }
 
+.oficial-site{
+  text-decoration: none;
+  color: var(--primary-color-rick-and-morty);
+  font-weight: bold;
+}
+
 .characters__principal-container-RAM{
   width: 100%;
   display: flex;
@@ -84,7 +91,6 @@ RICK AND MORTY STYLES
   color: var(--primary-color-rick-and-morty);
 }
 .characters__container-RAM:hover{
-  border-radius: 0 20px;
   box-shadow: 0px 0px 10px 1px #9b9999;
 }
 
@@ -128,7 +134,7 @@ RICK AND MORTY STYLES
   padding: 2rem;
 }
 
-.name_RAM, .specie-RAM, .origin-RAM, .origin-name-RAM{
+.name_RAM, .specie-RAM, .origin-RAM{
   color: var(--white);
   transition: all ease .3s;
 }
@@ -137,6 +143,108 @@ RICK AND MORTY STYLES
   font-weight: 900;
   color: #75929e;
 }
+
+.origin-name-RAM{
+  text-decoration: none;
+  color: var(--white);
+  transition: all ease .3s;
+}
+.origin-name-RAM:hover{
+  color: var(--primary-color-rick-and-morty);
+}
 /*========
 END RICK AND MORTY STYLES
+==========*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*========
+404
+==========*/
+.not-found__container{
+  width: 100%;
+  height: 100vh;
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+}
+
+.not-found__title{
+  font-size: 13rem !important;
+}
+@media all and (max-width: 900px) {
+  .not-found__title{
+    font-size: 10rem !important;
+  }
+}
+
+.not-found__title, .not-found__text{
+  color: var(--primary-color-rick-and-morty);
+}
+
+.not-found__text{
+  text-align: center;
+}
+
+.not-found__btn{
+  position: relative;
+  width: 7.5rem;
+  height: 3rem;
+  margin-top: 3rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 900;
+  background-color: var(--black);
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: all ease .3s;
+  border: 1px solid var(--primary-color-rick-and-morty);
+  color: var(--primary-color-rick-and-morty);
+}
+
+.not-found__btn::after{
+  content: '';
+  position: absolute;
+  width: 7.7rem;
+  height: 3.3rem;
+  top: 0;
+  right: 100%;
+  background-color: var(--primary-color-rick-and-morty);
+  transition: all ease .3s;
+  z-index: -1;
+}
+
+.not-found__btn:hover::after{
+  right: 0;
+}
+
+.not-found__btn:hover{
+  border: 1px solid var(--primary-color-rick-and-morty);
+  color: var(--black);
+}
+/*========
+END 404
 ==========*/
