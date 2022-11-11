@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 // import axios rick and morty
 import { getAllCharacters } from '../../services/services';
 import Character from './Character';
+// import NavBar
+import NavBarRickAndMorty from './NavBarRickAndMorty';
+
 
 const RickAndMortyComponent = () => {
 
@@ -30,6 +33,7 @@ const RickAndMortyComponent = () => {
 
     return (
         <div>
+            <NavBarRickAndMorty/>
             <div className='title__container-RAM'>
                 <h1 className='title__RAM'>The Rick and Morty API</h1>
                 <a

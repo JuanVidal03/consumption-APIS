@@ -4,6 +4,7 @@ import RickAndMortyComponent from './components/rickAndMorty/RickAndMortyCompone
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NotFoundPage from './pages/NotFoundPage';
 import CharacterDetail from './components/rickAndMorty/CharacterDetail';
+import NasaComponent from './components/NASA/NasaComponent';
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route exact path='/rick-and-morty' element={ <RickAndMortyComponent/> }/>
           {/* Character Detail */}
           <Route exact path='/character/:id' element={ <CharacterDetail/> }/>
+
+          {/* ===== NASA ===== */}
+          <Route exact path='/nasa' element={<NasaComponent/>}/>
+
 
           {/* 404 */}
           <Route path='*' element={ <NotFoundPage/> }/>
