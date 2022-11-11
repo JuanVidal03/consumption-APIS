@@ -10,6 +10,17 @@
   color: var(--primary-color-rick-and-morty);
   background-color: var(--secondary-color-rick-and-morty);
 }
+
+::-webkit-scrollbar{
+  width: 3px;
+  background-color: var(--secondary-color-rick-and-morty);
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: var(--primary-color-rick-and-morty);
+}
+
+/* variables */
 :root{
   --white: #fff;
   --black: #000;
@@ -61,6 +72,10 @@ RICK AND MORTY STYLES
   font-weight: bold;
 }
 
+.characters-bg-color{
+  background-color: var(--secondary-color-rick-and-morty);
+}
+
 .characters__principal-container-RAM{
   width: 100%;
   display: flex;
@@ -69,7 +84,6 @@ RICK AND MORTY STYLES
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  background-color: var(--secondary-color-rick-and-morty);
 }
 
 .characters__container-RAM{
@@ -137,6 +151,7 @@ RICK AND MORTY STYLES
 .name_RAM, .specie-RAM, .origin-RAM{
   color: var(--white);
   transition: all ease .3s;
+  text-decoration: none !important;
 }
 
 .origin-RAM{
@@ -152,9 +167,46 @@ RICK AND MORTY STYLES
 .origin-name-RAM:hover{
   color: var(--primary-color-rick-and-morty);
 }
+
+
+/* Detail character styles */
+.detail-character-principal-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--secondary-color-rick-and-morty);
+  background: linear-gradient(317deg, var(--primary-color-rick-and-morty) 65%, var(--secondary-color-rick-and-morty) 50%);
+}
+.detail-character-second-container{
+  width: 100%;
+  max-width: 1090px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.d-char-img{
+  border-radius: 30px;
+  box-shadow: 0px 0px 20px 5px #000000bd;
+}
+
+
+
 /*========
 END RICK AND MORTY STYLES
 ==========*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 
